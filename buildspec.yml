@@ -11,8 +11,14 @@ phases:
       - export CODEARTIFACT_AUTH_TOKEN
   build:
     commands:
-      - echo Build started on `date`
-      - mvn clean install -s settings.xml
+      - echo "====== BEGINNING TEST PHASE ======"
+      - echo "Running tests on `date`"
+      - chmod +x run-tests.sh
+      - ./run-tests.sh
+      - echo "====== TEST PHASE COMPLETE ======"
+      - echo "====== BEGINNING BUILD PHASE ======"
+      - mvn -s settings.xml compile
+      - echo "====== BUILD PHASE COMPLETE ======"
   post_build:
     commands:
       - echo Build completed on `date`
@@ -20,5 +26,4 @@ phases:
       - mvn package -s settings.xml
 artifacts:
   files:
-    - target/*.war
-  discard-paths: no
+    - target/nextwork-web-project.war
