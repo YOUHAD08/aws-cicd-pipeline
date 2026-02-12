@@ -41,7 +41,7 @@ By completing this challenge, I've gained practical experience in:
 
 ## 🏗️ Architecture
 
-![Project Architecture](https://learn.nextwork.org/projects/static/aws-devops-cicd/aws-cicd.png)
+![Project Architecture](https://learn.nextwork.org/projects/static/aws-devops-codepipeline-updated/architecture-complete.png)
 
 
 
